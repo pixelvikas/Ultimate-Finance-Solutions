@@ -87,16 +87,100 @@
       </nav>
     </header>
 
+    <img class="homepage-img" src="herobg.png" alt="" />
     <div class="homepage" id="home">
-      <img class="homepage-img" src="herobg.png" alt="" />
-
       <div class="content">
-       <h1 class="hero-text">
-        Your Trusted Partner <br />in Achieving <br />Financial Success.
-      </h1>
-      <img src="heroillustrations.png" alt="An illustration of financial growth with charts and graphs">
-   </div>
+        <h1 class="hero-text">
+          Your Trusted Partner <br />in Achieving <br />Financial Success.
+        </h1>
+        <img
+          src="heroillustrations.png"
+          alt="An illustration of financial growth with charts and graphs"
+        />
+      </div>
     </div>
+    <div class="services">
+      <div class="services-bgbox">
+        <div class="services-header">
+          <h2>Our Services</h2>
+          <p class="service-subtitle">Let us guide you on your financial journey</p>
+
+          <!-- Switch Section -->
+          <div class="switch">
+            <input
+              type="radio"
+              id="investment-toggle"
+              name="toggle"
+              class="switch-input"
+              checked
+              aria-label="Investment Tab"
+            />
+            <label
+              for="investment-toggle"
+              class="switch-label"
+              data-tab="investment-content"
+            >
+              Investment
+            </label>
+          
+            <input
+              type="radio"
+              id="loan-toggle"
+              name="toggle"
+              class="switch-input"
+              aria-label="Loan Tab"
+            />
+            <label
+              for="loan-toggle"
+              class="switch-label"
+              data-tab="loan-content"
+            >
+              Loan
+            </label>
+          
+            <div class="switch-bg"></div>
+          </div>
+          
+        </div>
+          <div class="services-box">
+            <!-- Investment Section -->
+            <div id="investment-details" class="services-details active">
+              <div class="services-description">
+                <p>
+                  Our Investments division offers a wide range of products designed to
+                  help our clients grow their wealth.
+                </p>
+              </div>
+              <div class="services-list">
+                <div class="service-item">Mutual Funds</div>
+                <div class="service-item">Alternative Investment Funds (AIFs)</div>
+                <div class="service-item">Corporate Fixed Deposits</div>
+                <div class="service-item">General and Life Insurance</div>
+                <div class="service-item">Bonds</div>
+                <div class="service-item">Unlisted Equity and Pre-IPO Shares</div>
+                <div class="service-item">Portfolio Management Services (PMS)</div>
+              </div>
+            </div>
+          
+            <!-- Loan Section -->
+            <div id="loan-details" class="services-details">
+              <div class="services-description">
+                <p>
+                  Our Loan Services provide a variety of financing options tailored to
+                  meet your personal or business needs.
+                </p>
+              </div>
+              <div class="services-list">
+                <div class="service-item">Home Loans</div>
+                <div class="service-item">Personal Loans</div>
+                <div class="service-item">Business Loans</div>
+                <div class="service-item">Vehicle Loans</div>
+                <div class="service-item">Loan Against Property</div>
+                <div class="service-item">Unsecured Business Loans</div>
+                <div class="service-item">MSME Loans</div>
+              </div>
+            </div>
+          
 
     <script src="script.js"></script>
   </body>

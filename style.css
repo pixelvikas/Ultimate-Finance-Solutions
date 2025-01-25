@@ -52,7 +52,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: transparent;
+  background-color: #fff;
   z-index: 100;
   transition: top 0.3s ease; /* Add this for smooth hide/show effect */
 }
@@ -246,6 +246,7 @@ body::-webkit-scrollbar-thumb {
 .homepage {
   min-height: 100vh;
   display: flex;
+  flex-direction: column; /* Stack content vertically */
   align-items: center;
   justify-content: center;
   position: relative;
@@ -253,7 +254,6 @@ body::-webkit-scrollbar-thumb {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  animation: change 25s infinite ease-in-out;
 }
 
 .homepage-img {
@@ -307,5 +307,243 @@ body::-webkit-scrollbar-thumb {
   .content img {
     flex: 1; /* Allow image to take up remaining space */
     max-width: 50%; /* Limit image width */
+  }
+} /* General Styles */
+.services {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.services-bgbox {
+  position: relative;
+  background-color: #203e33; /* Dark green */
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 900px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: -50px;
+  z-index: 2;
+}
+
+.services-header h2 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.service-subtitle {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+/* Switch Styles */
+.switch {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 90%; /* Adjust for smaller screens */
+  max-width: 360px; /* Maintain width limit */
+  height: 50px;
+  margin: 1.5rem auto;
+  background-color: #f0f0f0;
+  border-radius: 25px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.switch-input {
+  display: none;
+}
+
+.switch-label {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem; /* Adjust for smaller screens */
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+.switch-input:checked + .switch-label {
+  color: #ffffff;
+}
+
+.switch-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, #36c49f, #119d72);
+  border-radius: 25px;
+  transition: transform 0.4s ease-in-out;
+  z-index: 1;
+}
+
+.switch-input[id="investment-toggle"]:checked ~ .switch-bg {
+  transform: translateX(0%);
+}
+
+.switch-input[id="loan-toggle"]:checked ~ .switch-bg {
+  transform: translateX(100%);
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  margin: 1.5rem auto;
+  padding: 1rem; /* Reduced padding for small screens */
+  max-width: 600px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Services Details */
+.services-details {
+  display: none;
+  margin-top: 1rem;
+  flex-direction: column; /* Default for smaller screens */
+}
+
+.services-details.active {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* Responsive Grid for Service Items */
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, 1fr)
+  ); /* Auto-adjust columns */
+  gap: 1rem;
+  width: 100%; /* Ensure proper scaling */
+}
+
+.service-item {
+  padding: 0.5rem 1rem;
+  background: #e7f8f3;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  color: #0f1e1a;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Consistent shadows */
+}
+
+/* Services Box Layout */
+.services-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.services-content {
+  display: none;
+  animation: fadeIn 0.5s ease forwards;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.services-content.active {
+  display: flex;
+}
+
+.services-description {
+  flex: 1;
+  color: #ffffff;
+  font-size: 1.2rem; /* Adjusted font size for small screens */
+  margin-right: 1rem;
+  line-height: 1.5;
+  max-width: 600px; /* Restrict width for readability */
+  text-align: left;
+}
+
+.services-list {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, 1fr)
+  ); /* Responsive grid */
+  gap: 1rem;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  .services-box {
+    flex-direction: column;
+  }
+
+  .services-description,
+  .services-list {
+    max-width: 100%;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+
+  .switch {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .switch-label {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+
+  .tab-content {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  .services-details.active {
+    flex-direction: column;
+  }
+}
+
+/* Media Queries for Extra Small Screens */
+@media (max-width: 480px) {
+  .services-bgbox {
+    padding: 1.5rem;
+    margin-top: -30px; /* Adjust margin */
+  }
+
+  .services-description {
+    font-size: 1rem;
+  }
+
+  .service-item {
+    font-size: 0.9rem;
+    padding: 0.5rem;
   }
 }
