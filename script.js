@@ -56,3 +56,12 @@ document.querySelectorAll(".switch-label").forEach((label) => {
     });
   });
 });
+
+// Initialize Kursor after the DOM is ready
+document.addEventListener("DOMContentLoaded", () => {
+  new kursor({
+    type: 2, // Type of cursor (1 = dot, 2 = circle, etc.)
+    color: "#87c92e", // Optional: Set a custom color for the cursor
+    removeDefaultCursor: true,
+  });
+});
