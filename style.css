@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: "Alegreya", serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.navbar {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff4d4d;
+  border-radius: 30px;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 12px auto;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  background: none;
+  border: none;
+}
+/* Global Styles */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 20px; /* Adjusted padding for better spacing */
+  border-radius: 20px;
+  transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1024px) {
+  .nav-links li a {
+    padding: 8px 15px; /* Slightly reduce padding */
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide on smaller screens by default */
+    flex-direction: column; /* Stack vertically */
+    justify-content: center; /* Center links vertically */
+    align-items: center;
+    background-color: #ff4d4d;
+    border-radius: 10px;
+    position: absolute;
+    top: 70px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    width: 90%; /* Dynamically adjust width */
+    padding: 15px 0; /* Add vertical padding */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  .nav-links.active {
+    display: flex; /* Show when active */
+  }
+
+  .nav-links li a {
+    width: 100%; /* Stretch links to fill the container */
+    text-align: center; /* Center text inside the links */
+    padding: 12px 0; /* Add vertical padding for touch targets */
+  }
+
+  .menu-icon {
+    display: block; /* Show the menu icon */
+  }
+}
+
+/* For Very Small Devices */
+@media (max-width: 480px) {
+  .nav-links {
+    width: 95%; /* Slightly smaller width for very small screens */
+  }
+
+  .nav-links li a {
+    font-size: 0.9rem; /* Reduce font size for better spacing */
+    padding: 11px 35px;
+  }
+}
