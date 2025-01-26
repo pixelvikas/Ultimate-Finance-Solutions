@@ -27,17 +27,17 @@ navLinks.forEach((link) => {
   });
 });
 
-// /* Hide header on scroll down, show on scroll up */
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY > lastScrollY) {
-//     // Scrolling down
-//     header.classList.add("hidden-header");
-//   } else {
-//     // Scrolling up
-//     header.classList.remove("hidden-header");
-//   }
-//   lastScrollY = window.scrollY;
-// });
+/* Hide header on scroll down, show on scroll up */
+window.addEventListener("scroll", () => {
+  if (window.scrollY > lastScrollY) {
+    // Scrolling down
+    header.classList.add("hidden-header");
+  } else {
+    // Scrolling up
+    header.classList.remove("hidden-header");
+  }
+  lastScrollY = window.scrollY;
+});
 
 // 🥷 Improved Toggle Functionality
 document.querySelectorAll(".switch-label").forEach((label) => {
