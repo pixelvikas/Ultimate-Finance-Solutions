@@ -61,7 +61,7 @@ document.querySelectorAll(".switch-label").forEach((label) => {
 document.addEventListener("DOMContentLoaded", () => {
   new kursor({
     type: 2, // Type of cursor (1 = dot, 2 = circle, etc.)
-    color: "#87c92e", // Optional: Set a custom color for the cursor
-    removeDefaultCursor: true,
+    color: "#36c49f", // Custom color for the cursor (use a solid color)
+    removeDefaultCursor: true, // Remove the browser's default cursor
   });
 });
