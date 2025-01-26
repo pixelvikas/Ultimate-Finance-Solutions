@@ -14,47 +14,59 @@
     <title>Real Homes</title>
   </head>
   <body>
+    <div class="loading-page">
+      <div class="logo-loader-container">
+        <img class="logo-loader" src="ufsverticallogo.png" alt="Loading..." />
+      </div>
+    </div>
     <!--==================== HEADER ====================-->
-    <header class="header" id="header">
-      <nav class="nav container">
-        <a href="#home" class="nav__logo">
-          <img src="ufsverticallogo.png" alt="" />
-        </a>
+    <div id="main-content" class="hidden">
+      <header class="header" id="header">
+        <nav class="nav container">
+          <a href="/" class="nav__logo">
+            <img src="ufsverticallogo.png" alt="" />
+          </a>
 
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#" class="nav__link">
-                <i class="ri-arrow-right-up-line"></i>
-                <span>Home</span>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#aboutus" class="nav__link">
-                <i class="ri-arrow-right-up-line"></i>
-                <span>About Us</span>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#projects" class="nav__link">
-                <i class="ri-arrow-right-up-line"></i>
-                <span>Our Projects</span>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact-form" class="nav__link">
-                <i class="ri-arrow-right-up-line"></i>
-                <span>Contact</span>
-              </a>
-            </li>
-          </ul>
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="/" class="nav__link">
+                  <i class="ri-arrow-right-up-line"></i>
+                  <span>Home</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#aboutus" class="nav__link">
+                  <i class="ri-arrow-right-up-line"></i>
+                  <span>Services</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#projects" class="nav__link">
+                  <i class="ri-arrow-right-up-line"></i>
+                  <span>Why Us</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#contact-form" class="nav__link">
+                  <i class="ri-arrow-right-up-line"></i>
+                  <span>About Us</span>
+                </a>
+              </li>
+              <li class="nav__item">
+                <a href="#contact-form" class="nav__link">
+                  <i class="ri-arrow-right-up-line"></i>
+                  <span>Contact Us</span>
+                </a>
+              </li>
+            </ul>
 
-          <!-- Close button -->
-          <div class="nav__close" id="nav-close">
-            <i class="ri-close-large-line"></i>
-          </div>
+            <!-- Close button -->
+            <div class="nav__close" id="nav-close">
+              <i class="ri-close-large-line"></i>
+            </div>
 
-          <div class="nav__social">
+            <!-- <div class="nav__social">
             <a
               href="https://www.instagram.com/real_homesdevelopers/"
               target="_blank"
@@ -78,274 +90,290 @@
             >
               <i class="ri-facebook-circle-line"></i>
             </a>
+          </div> -->
           </div>
-        </div>
 
-        <!-- Toggle button -->
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="ri-menu-4-line"></i>
-        </div>
-      </nav>
-    </header>
+          <!-- Toggle button -->
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-4-line"></i>
+          </div>
+        </nav>
+      </header>
 
-    <img class="homepage-img" src="herobg.png" alt="" />
-    <div class="homepage" id="home">
-      <div class="content">
-        <h1 class="hero-text slide-in-left">
-          Your Trusted Partner <br />in Achieving <br />Financial Success.
-        </h1>
-        <img
-          class="slide-in-right"
-          src="heroillustrations.png"
-          alt="An illustration of financial growth with charts and graphs"
-        />
+      <img class="homepage-img" src="herobg.png" alt="" />
+      <div class="homepage" id="home">
+        <div class="content">
+          <h1 class="hero-text slide-in-left">
+            Your Trusted Partner <br />in Achieving <br />Financial Success.
+          </h1>
+          <img
+            class="fade-in"
+            src="heroillustrations.png"
+            alt="An illustration of financial growth with charts and graphs"
+          />
+        </div>
       </div>
-    </div>
-    <div class="services">
-      <div class="services-bgbox fade-in">
-        <div class="services-header">
-          <h2>Our Services</h2>
-          <p class="service-subtitle">
-            Let us guide you on your financial journey
-          </p>
+      <div class="services">
+        <div class="services-bgbox fade-in">
+          <div class="services-header">
+            <h2>Our Services</h2>
+            <p class="service-subtitle">
+              Let us guide you on your financial journey
+            </p>
 
-          <!-- Switch Section -->
-          <div class="switch">
-            <input
-              type="radio"
-              id="investment-toggle"
-              name="toggle"
-              class="switch-input"
-              checked
-              aria-label="Investment Tab"
-            />
-            <label
-              for="investment-toggle"
-              class="switch-label"
-              data-tab="investment-content"
-            >
-              Investment
-            </label>
+            <!-- Switch Section -->
+            <div class="switch">
+              <input
+                type="radio"
+                id="investment-toggle"
+                name="toggle"
+                class="switch-input"
+                checked
+                aria-label="Investment Tab"
+              />
+              <label
+                for="investment-toggle"
+                class="switch-label"
+                data-tab="investment-content"
+              >
+                Investment
+              </label>
 
-            <input
-              type="radio"
-              id="loan-toggle"
-              name="toggle"
-              class="switch-input"
-              aria-label="Loan Tab"
-            />
-            <label
-              for="loan-toggle"
-              class="switch-label"
-              data-tab="loan-content"
-            >
-              Loan
-            </label>
+              <input
+                type="radio"
+                id="loan-toggle"
+                name="toggle"
+                class="switch-input"
+                aria-label="Loan Tab"
+              />
+              <label
+                for="loan-toggle"
+                class="switch-label"
+                data-tab="loan-content"
+              >
+                Loan
+              </label>
 
-            <div class="switch-bg"></div>
+              <div class="switch-bg"></div>
+            </div>
+          </div>
+          <div class="services-box">
+            <!-- Investment Section -->
+            <div id="investment-details" class="services-details active">
+              <div class="services-description slide-in-left">
+                <p>
+                  Our Investments division offers a wide range of products
+                  designed to help our clients grow their wealth.
+                </p>
+              </div>
+              <div class="services-list zoom-in">
+                <div class="service-item">Mutual Funds</div>
+                <div class="service-item">
+                  Alternative Investment Funds (AIFs)
+                </div>
+                <div class="service-item">Corporate Fixed Deposits</div>
+                <div class="service-item">General and Life Insurance</div>
+                <div class="service-item">Bonds</div>
+                <div class="service-item">
+                  Unlisted Equity and Pre-IPO Shares
+                </div>
+                <div class="service-item">
+                  Portfolio Management Services (PMS)
+                </div>
+              </div>
+            </div>
+
+            <!-- Loan Section -->
+            <div id="loan-details" class="services-details">
+              <div class="services-description slide-in-left">
+                <p>
+                  Our Loan Services provide a variety of financing options
+                  tailored to meet your personal or business needs.
+                </p>
+              </div>
+              <div class="services-list zoom-in">
+                <div class="service-item">Home Loans</div>
+                <div class="service-item">Personal Loans</div>
+                <div class="service-item">Business Loans</div>
+                <div class="service-item">Vehicle Loans</div>
+                <div class="service-item">Loan Against Property</div>
+                <div class="service-item">Unsecured Business Loans</div>
+                <div class="service-item">MSME Loans</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="services-box">
-          <!-- Investment Section -->
-          <div id="investment-details" class="services-details active">
-            <div class="services-description slide-in-left">
+      </div>
+
+      <div class="why-us-section">
+        <div class="why-us-container">
+          <h1 class="why-us-title">Why Us</h1>
+          <div class="why-us-content">
+            <div class="why-us-icons slide-in-left">
+              <div class="icon-box">
+                <i class="ri-focus-2-line"></i>
+                <p>Customer-centric approach as our core focus.</p>
+              </div>
+              <div class="icon-box">
+                <i class="ri-lightbulb-flash-line"></i>
+                <p>Tailored solutions for your needs.</p>
+              </div>
+              <div class="icon-box">
+                <i class="ri-user-star-line"></i>
+                <p>30+ years of banking expertise.</p>
+              </div>
+              <div class="icon-box">
+                <i class="ri-line-chart-line"></i>
+                <p>Mastery of the financial landscape.</p>
+              </div>
+            </div>
+            <div class="why-us-text zoom-in">
               <p>
-                Our Investments division offers a wide range of products
-                designed to help our clients grow their wealth.
+                At Ultimate Financial Solutions, our mission is to empower our
+                clients with the knowledge and resources they need to make
+                informed financial decisions.
+              </p>
+              <p>
+                We take pride in our customer-centric approach, ensuring that
+                each solution is customized to fit our clients' unique
+                circumstances and goals.
               </p>
             </div>
-            <div class="services-list slide-in-right">
-              <div class="service-item">Mutual Funds</div>
-              <div class="service-item">
-                Alternative Investment Funds (AIFs)
-              </div>
-              <div class="service-item">Corporate Fixed Deposits</div>
-              <div class="service-item">General and Life Insurance</div>
-              <div class="service-item">Bonds</div>
-              <div class="service-item">Unlisted Equity and Pre-IPO Shares</div>
-              <div class="service-item">
-                Portfolio Management Services (PMS)
-              </div>
-            </div>
-          </div>
-
-          <!-- Loan Section -->
-          <div id="loan-details" class="services-details">
-            <div class="services-description slide-in-left">
-              <p>
-                Our Loan Services provide a variety of financing options
-                tailored to meet your personal or business needs.
-              </p>
-            </div>
-            <div class="services-list slide-in-right">
-              <div class="service-item">Home Loans</div>
-              <div class="service-item">Personal Loans</div>
-              <div class="service-item">Business Loans</div>
-              <div class="service-item">Vehicle Loans</div>
-              <div class="service-item">Loan Against Property</div>
-              <div class="service-item">Unsecured Business Loans</div>
-              <div class="service-item">MSME Loans</div>
-            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="why-us-section">
-      <div class="why-us-container">
-        <h1 class="why-us-title">Why Us</h1>
-        <div class="why-us-content">
-          <div class="why-us-icons slide-in-left">
-            <div class="icon-box">
-              <i class="ri-focus-2-line"></i>
-              <p>Customer-centric approach as our core focus.</p>
+      <div class="about-us-section">
+        <h1 class="about-us-title">Know About Us</h1>
+        <div class="about-us-content">
+          <div class="about-us-images zoom-in">
+            <div class="image-box">
+              <img src="YuktarthShrivastava.png" alt="Yuktarth Shrivastava" />
+              <p class="image-caption">Yuktarth Shrivastava</p>
             </div>
-            <div class="icon-box">
-              <i class="ri-lightbulb-flash-line"></i>
-              <p>Tailored solutions for your needs.</p>
-            </div>
-            <div class="icon-box">
-              <i class="ri-user-star-line"></i>
-              <p>30+ years of banking expertise.</p>
-            </div>
-            <div class="icon-box">
-              <i class="ri-line-chart-line"></i>
-              <p>Mastery of the financial landscape.</p>
+            <div class="image-box">
+              <img src="VikasVishwakarma.png" alt="Vikas Vishwakarma" />
+              <p class="image-caption">Vikas Vishwakarma</p>
             </div>
           </div>
-          <div class="why-us-text slide-in-right">
-            <p>
-              At Ultimate Financial Solutions, our mission is to empower our
-              clients with the knowledge and resources they need to make
-              informed financial decisions.
-            </p>
-            <p>
-              We take pride in our customer-centric approach, ensuring that each
-              solution is customized to fit our clients' unique circumstances
-              and goals.
+          <div class="about-us-text zoom-in">
+            <p class="about-us-description">
+              Established in October 2022,<br />
+              <strong>Ultimate Financial Solutions</strong> is a partnership
+              firm founded by seasoned bankers
+              <span class="highlight">Yuktarth Shrivastava</span> and
+              <span class="highlight">Vikas Vishwakarma</span>. With over
+              <strong>15 years of experience</strong> each in leading private
+              Indian banks, they leverage their expertise to deliver tailored
+              financial solutions for diverse client needs.
             </p>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="about-us-section">
-      <h1 class="about-us-title">Know About Us</h1>
-      <div class="about-us-content">
-        <div class="about-us-images zoom-in">
-          <div class="image-box">
-            <img src="YuktarthShrivastava.png" alt="Yuktarth Shrivastava" />
-            <p class="image-caption">Yuktarth Shrivastava</p>
-          </div>
-          <div class="image-box">
-            <img src="VikasVishwakarma.png" alt="Vikas Vishwakarma" />
-            <p class="image-caption">Vikas Vishwakarma</p>
-          </div>
-        </div>
-        <div class="about-us-text zoom-in">
-          <p class="about-us-description">
-            Established in October 2022,<br />
-            <strong>Ultimate Financial Solutions</strong> is a partnership firm
-            founded by seasoned bankers
-            <span class="highlight">Yuktarth Shrivastava</span> and
-            <span class="highlight">Vikas Vishwakarma</span>. With over
-            <strong>15 years of experience</strong> each in leading private
-            Indian banks, they leverage their expertise to deliver tailored
-            financial solutions for diverse client needs.
+      <div class="contact-section zoom-in">
+        <div class="contact-header">
+          <h1>Join us at Ultimate Financial Solutions!</h1>
+          <p>
+            Let us help you navigate your financial journey with confidence.
+            <br />
+            For personalized financial solutions, contact us today!
           </p>
         </div>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile No.</label>
+            <input
+              type="number"
+              id="mobile"
+              name="mobile"
+              placeholder="Enter your mobile number"
+            />
+          </div>
+          <div class="form-group full-width">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="form-group full-width">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write your message"
+            ></textarea>
+          </div>
+          <div class="submit-container">
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+        </form>
       </div>
-    </div>
-
-    <div class="contact-section zoom-in">
-      <div class="contact-header">
-        <h1>Join us at Ultimate Financial Solutions!</h1>
-        <p>
-          Let us help you navigate your financial journey with confidence.
-          <br />
-          For personalized financial solutions, contact us today!
-        </p>
-      </div>
-      <form class="contact-form">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your name"
-          />
+      <div class="footer">
+        <div class="footer-logo">
+          <img src="footerlogo.png" alt="Footer Logo" />
         </div>
-        <div class="form-group">
-          <label for="mobile">Mobile No.</label>
-          <input
-            type="number"
-            id="mobile"
-            name="mobile"
-            placeholder="Enter your mobile number"
-          />
+        <div class="footer-links">
+          <h1>Quick Links</h1>
+          <ul>
+            <li>Home</li>
+            <li>Our Services</li>
+            <li>About Us</li>
+            <li>Contact</li>
+          </ul>
         </div>
-        <div class="form-group full-width">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
-          />
+        <div class="footer-contact">
+          <h1>Contact Details</h1>
+          <ul>
+            <li><i class="ri-mail-line"></i> Email</li>
+            <li><i class="ri-customer-service-line"></i> Phone</li>
+          </ul>
         </div>
-        <div class="form-group full-width">
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Write your message"
-          ></textarea>
+        <div class="footer-map">
+          <iframe
+            title="Company Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3131.9193236854294!2d72.87898507430629!3d19.103939682106375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8bd850fe24b%3A0xc190a88be735d0b5!2sImprints%20INC!5e1!3m2!1sen!2sin!4v1726071394981!5m2!1sen!2sin"
+            width="100%"
+            height="200"
+            style="border: 0; border-radius: 10px"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
-        <div class="submit-container">
-          <button type="submit" class="submit-btn">Submit</button>
-        </div>
-      </form>
-    </div>
-    <div class="footer">
-      <div class="footer-logo">
-        <img src="footerlogo.png" alt="Footer Logo" />
       </div>
-      <div class="footer-links">
-        <h1>Quick Links</h1>
-        <ul>
-          <li>Home</li>
-          <li>Our Services</li>
-          <li>About Us</li>
-          <li>Contact</li>
-        </ul>
+      <div class="footer-bottom">
+        © 2025 Ultimate Finance Solution. All rights reserved.
       </div>
-      <div class="footer-contact">
-        <h1>Contact Details</h1>
-        <ul>
-          <li><i class="ri-mail-line"></i> Email</li>
-          <li><i class="ri-customer-service-line"></i> Phone</li>
-        </ul>
-      </div>
-      <div class="footer-map">
-        <iframe
-          title="Company Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3131.9193236854294!2d72.87898507430629!3d19.103939682106375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8bd850fe24b%3A0xc190a88be735d0b5!2sImprints%20INC!5e1!3m2!1sen!2sin!4v1726071394981!5m2!1sen!2sin"
-          width="100%"
-          height="200"
-          style="border: 0; border-radius: 10px"
-          allowfullscreen
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      © 2025 Ultimate Finance Solution. All rights reserved.
     </div>
 
     <script src="https://unpkg.com/kursor"></script>
 
     <script src="script.js"></script>
   </body>
+  <a
+    href="https://wa.me/9324389141?text=Hi%20there!%20I%20need%20assistance."
+    class="whatsapp-button"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+  >
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      alt="WhatsApp Icon"
+      class="whatsapp-icon"
+    />
+  </a>
 </html>

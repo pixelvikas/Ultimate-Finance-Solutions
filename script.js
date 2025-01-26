@@ -91,3 +91,18 @@ document.addEventListener("DOMContentLoaded", () => {
     animatedElements.forEach((element) => observer.unobserve(element));
   };
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.querySelector(".loading-page");
+  const mainContent = document.getElementById("main-content");
+
+  // Simulate a delay (e.g., 1.5 seconds for demo)
+  setTimeout(() => {
+    // Apply fade-out effect for loader
+    loader.style.opacity = "0"; // Smooth fade-out for loader
+    loader.style.visibility = "hidden"; // Ensures loader is not interactive when hidden
+
+    // Show the main content
+    mainContent.classList.remove("hidden");
+    mainContent.classList.add("show");
+  }, 1500); // Adjust delay time as needed (1500ms = 1.5 seconds)
+});
