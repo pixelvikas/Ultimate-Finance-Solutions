@@ -343,7 +343,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #203e33; /* Dark green */
   padding: 2rem;
   border-radius: 16px;
-  width: 90%;
+  width: 85%;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   margin-top: -80px;
@@ -774,7 +774,7 @@ body::-webkit-scrollbar-thumb {
 }
 .contact-section {
   padding: 40px 20px;
-  width: 90%;
+  width: 85%;
   color: #fff;
   text-align: center;
 
@@ -857,6 +857,7 @@ textarea:focus {
 }
 
 .submit-btn {
+  font-family: "Alegreya", serif;
   width: 100%;
   max-width: 200px;
   padding: 12px 20px;

@@ -40,9 +40,29 @@ window.addEventListener("scroll", () => {
 });
 
 // 🥷 Improved Toggle Functionality
-document.querySelectorAll(".switch-label").forEach((label) => {
-  label.addEventListener("click", () => {
-    const targetTab = label.getAttribute("data-tab");
+document.querySelector(".switch").addEventListener("click", (event) => {
+  // Identify the clicked element
+  const investmentToggle = document.getElementById("investment-toggle");
+  const loanToggle = document.getElementById("loan-toggle");
+
+  // Determine where the user clicked
+  const switchBounds = event.currentTarget.getBoundingClientRect();
+  const clickPositionX = event.clientX - switchBounds.left;
+
+  // Toggle the appropriate input based on the click position
+  if (clickPositionX < switchBounds.width / 2) {
+    investmentToggle.checked = true; // Left half: Investment
+    investmentToggle.dispatchEvent(new Event("change")); // Trigger change event
+  } else {
+    loanToggle.checked = true; // Right half: Loan
+    loanToggle.dispatchEvent(new Event("change")); // Trigger change event
+  }
+});
+
+// Trigger tab updates on input change
+document.querySelectorAll(".switch-input").forEach((input) => {
+  input.addEventListener("change", () => {
+    const targetTab = input.nextElementSibling.getAttribute("data-tab");
 
     // Update active tab content
     document.querySelectorAll(".tab-content").forEach((content) => {
