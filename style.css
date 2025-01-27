@@ -383,7 +383,7 @@ body::-webkit-scrollbar-thumb {
 .switch-label {
   flex: 1;
   text-align: center;
-  font-size: 1rem; /* Adjust for smaller screens */
+  font-size: 1.2rem; /* Adjust for smaller screens */
   font-weight: bold;
   color: #333;
   cursor: pointer;
@@ -563,7 +563,7 @@ body::-webkit-scrollbar-thumb {
   }
 
   .switch-label {
-    font-size: 1rem; /* Smaller font size for mobile */
+    font-size: 1.1rem; /* Smaller font size for mobile */
   }
 
   .tab-content {
