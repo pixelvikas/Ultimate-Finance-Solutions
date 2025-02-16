@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Improved Navbar</title>
+    <title>Ultimate Financial Solutions</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
@@ -281,8 +281,21 @@
               For personalized financial solutions, contact us today!
             </p>
           </div>
-          <form class="contact-form">
+
+          <form
+            action="https://api.web3forms.com/submit"
+            class="contact-form"
+            method="POST"
+          >
+            <!-- Web3Forms Access Key -->
+            <input
+              type="hidden"
+              name="access_key"
+              value="ba521758-99c9-4b4b-bbfd-15b09b531ad7"
+            />
+
             <div class="form-container">
+              <!-- Name Field -->
               <div class="form-group">
                 <label for="name">Name</label>
                 <input
@@ -290,18 +303,25 @@
                   id="name"
                   name="name"
                   placeholder="Enter your name"
+                  required
                 />
               </div>
+
+              <!-- Mobile Number Field -->
               <div class="form-group">
                 <label for="mobile">Mobile No.</label>
                 <input
-                  type="number"
+                  type="tel"
                   id="mobile"
                   name="mobile"
                   placeholder="Enter your mobile number"
+                  pattern="[0-9]{10}"
+                  required
                 />
               </div>
             </div>
+
+            <!-- Email Field -->
             <div class="form-group full-width">
               <label for="email">Email</label>
               <input
@@ -309,16 +329,22 @@
                 id="email"
                 name="email"
                 placeholder="Enter your email"
+                required
               />
             </div>
+
+            <!-- Message Field -->
             <div class="form-group full-width">
               <label for="message">Message</label>
               <textarea
                 id="message"
                 name="message"
                 placeholder="Write your message"
+                required
               ></textarea>
             </div>
+
+            <!-- Submit Button -->
             <div class="submit-container">
               <button type="submit" class="submit-btn">Submit</button>
             </div>
@@ -341,8 +367,14 @@
         <div class="footer-contact">
           <h1>Contact Details</h1>
           <ul>
-            <li><i class="ri-mail-line"></i> Email</li>
-            <li><i class="ri-customer-service-line"></i> Phone</li>
+            <li>
+              <i class="ri-mail-line"></i> Email
+              <a href="mailto:info@thriftconcepts.com"></a>
+            </li>
+            <li>
+              <i class="ri-customer-service-line"></i> Phone
+              <a href="tel:+1234567890"></a>
+            </li>
           </ul>
         </div>
         <div class="footer-map">

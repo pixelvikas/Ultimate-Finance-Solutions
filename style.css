@@ -559,11 +559,11 @@ body::-webkit-scrollbar-thumb {
   }
 
   .switch {
-    width: 100%; /* Full width on smaller screens */
+    width: 100%; 
   }
 
   .switch-label {
-    font-size: 1.1rem; /* Smaller font size for mobile */
+    font-size: 1.1rem; 
   }
 
   .tab-content {
