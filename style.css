@@ -559,11 +559,11 @@ body::-webkit-scrollbar-thumb {
   }
 
   .switch {
-    width: 100%; 
+    width: 100%;
   }
 
   .switch-label {
-    font-size: 1.1rem; 
+    font-size: 1.1rem;
   }
 
   .tab-content {
@@ -927,6 +927,11 @@ textarea:focus {
 .footer-contact ul {
   list-style: none;
   padding: 0;
+}
+
+.footer-contact ul li a {
+  text-decoration: none;
+  color: #2f3e39;
 }
 
 .footer-links li,
